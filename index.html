@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Tutorial App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --success-color: #10b981;
+            --gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="premium-banner">
+                <i class="fas fa-crown"></i>
+                <span>Premium Tutorials</span>
+            </div>
+            <h1 class="title">Tutorial App</h1>
+            <div class="search-section">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search tutorials by title, description, region, or materials...">
+                    <button id="searchButton">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+                <div class="search-filters">
+                    <select id="difficultyFilter">
+                        <option value="">All Levels</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                    <select id="regionFilter">
+                        <option value="">All Regions</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Japan">Japan</option>
+                        <option value="France">France</option>
+                        <option value="India">India</option>
+                        <option value="Korea">Korea</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Africa">Africa</option>
+                        <option value="China">China</option>
+                        <option value="Spain">Spain</option>
+                        <option value="England">England</option>
+                        <option value="Tibet">Tibet</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Middle East">Middle East</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <div id="tutorialsGrid" class="tutorials-grid">
+            <!-- Placeholder Tutorial Cards -->
+            <div class="tutorial-card placeholder">
+                <div class="tutorial-header">
+                    <div class="placeholder-badge"></div>
+                    <div class="placeholder-duration"></div>
+                </div>
+                <div class="tutorial-info">
+                    <div class="placeholder-title"></div>
+                    <div class="placeholder-description"></div>
+                    <div class="placeholder-materials"></div>
+                    <div class="tutorial-footer">
+                        <div class="placeholder-button"></div>
+                        <div class="placeholder-button"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat placeholder cards -->
+            <div class="tutorial-card placeholder">
+                <div class="tutorial-header">
+                    <div class="placeholder-badge"></div>
+                    <div class="placeholder-duration"></div>
+                </div>
+                <div class="tutorial-info">
+                    <div class="placeholder-title"></div>
+                    <div class="placeholder-description"></div>
+                    <div class="placeholder-materials"></div>
+                    <div class="tutorial-footer">
+                        <div class="placeholder-button"></div>
+                        <div class="placeholder-button"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-card placeholder">
+                <div class="tutorial-header">
+                    <div class="placeholder-badge"></div>
+                    <div class="placeholder-duration"></div>
+                </div>
+                <div class="tutorial-info">
+                    <div class="placeholder-title"></div>
+                    <div class="placeholder-description"></div>
+                    <div class="placeholder-materials"></div>
+                    <div class="tutorial-footer">
+                        <div class="placeholder-button"></div>
+                        <div class="placeholder-button"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-card placeholder">
+                <div class="tutorial-header">
+                    <div class="placeholder-badge"></div>
+                    <div class="placeholder-duration"></div>
+                </div>
+                <div class="tutorial-info">
+                    <div class="placeholder-title"></div>
+                    <div class="placeholder-description"></div>
+                    <div class="placeholder-materials"></div>
+                    <div class="tutorial-footer">
+                        <div class="placeholder-button"></div>
+                        <div class="placeholder-button"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading-spinner">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Pic Tutorial Modal -->
+    <div id="picTutorialModal" class="pic-tutorial-modal">
+        <div class="pic-tutorial-content">
+            <div class="pic-tutorial-header">
+                <h2>Visual Guide</h2>
+                <button class="close-pic-tutorial">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="pic-tutorial-body">
+                <div class="pic-tutorial-navigation">
+                    <button class="prev-pic">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="pic-tutorial-slides">
+                        <!-- Slides will be dynamically added here -->
+                    </div>
+                    <button class="next-pic">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="pic-tutorial-description">
+                    <!-- Description will be dynamically added here -->
+                </div>
+            </div>
+            <div class="pic-tutorial-footer">
+                <div class="pic-tutorial-progress">
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <span class="current-slide">1 / 10</span>
+                </div>
+                <div class="pic-tutorial-actions">
+                    <button class="like-pic">
+                        <i class="fas fa-heart"></i>
+                        <span class="like-count">0</span>
+                    </button>
+                    <button class="share-pic">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
